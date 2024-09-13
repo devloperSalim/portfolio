@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Salim Boulkhir</title>
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 200px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #3a6cf4;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.navigation a {
+    color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-left: 30px;
+}
+
+.navigation a:hover {
+    color: #601cfc;
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(image/image2.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main h2 {
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 10px;
+    color: #4e9eff;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.main h3 {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.main-btn {
+    color: #fff;
+    background-color: #3a6cf4;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.1875em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+}
+
+.main-btn:hover {
+    background-color: #0a49f6;
+    transform: scale(1.1);
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.7em;
+    padding-right: 30px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(1, 1, 1, 0.15);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card .icon {
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects {
+    background-color: #000016;
+}
+
+.projects .content {
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    border: 1px solid #fff;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-image {
+    opacity: 0.9;
+}
+
+.project-image img {
+    width: 100%;         /* Ensures image takes full width of its container */
+    height: auto;        /* Maintains aspect ratio */
+    display: block;      /* Avoids gaps below images */
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.project-category {
+    font-size: 0.8em;
+    color: #000;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.more-details {
+    text-decoration: none;
+    color: #3a6cf4;
+}
+
+.more-details:hover {
+    color: #601cfc;
+}
+
+.contact .icon {
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    color: #000;
+}
+
+.contact .info p {
+    font-size: 1.2em;
+}
+
+.footer {
+    background-color: #000016;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.footer-title span {
+    color: #3a6cf4;
+}
+
+.footer .social-icons a {
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    .navigation a {
+        padding-left: 10px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .main-content h2 {
+        font-size: 1em;
+    }
+
+    .main-content h3 {
+        font-size: 1.6em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card, .card {
+        width: 100%;       /* Full width for smaller screens */
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 641px) {
+    body {
+        font-size: 12px;
+    }
+
+    .main-content h2 {
+        font-size: 0.8em;
+    }
+
+    .main-content h3 {
+        font-size: 1.4em;
+    }
+
+    .project-card, .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 300px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+</style>
+<body>
+
+    <header>
+        <a href="#" class="logo">Salim</a>
+        <nav class="navigation">
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <section class="main">
+        <div>
+          <h2>Hello, I'm Salim<br><span>Full-Stack Developer</span></h2>
+          <h3>I create dynamic, high-performance web applications</h3>
+            <a href="#projects" class="main-btn">View my work</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/salim-boulkhir/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/SalimB1937"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/boulkhirsalim/"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="cards" id="services">
+      <h2 class="title">Services</h2>
+      <div class="content">
+          <div class="card">
+              <div class="icon">
+                  <i class="fas fa-code"></i>
+              </div>
+              <div class="info">
+                  <h3>Full-Stack Development</h3>
+                  <p>Build dynamic web applications from front to back using technologies like PHP, Laravel, React, MongoDB, MySQL, and more.</p>
+              </div>
+          </div>
+          <div class="card">
+              <div class="icon">
+                  <i class="fas fa-database"></i>
+              </div>
+              <div class="info">
+                  <h3>Database Design & Management</h3>
+                  <p>Design, optimize, and manage databases with MySQL, MongoDB, ensuring scalability and efficiency for any project.</p>
+              </div>
+          </div>
+          <div class="card">
+              <div class="icon">
+                  <i class="fas fa-cloud"></i>
+              </div>
+              <div class="info">
+                  <h3>Cloud Integration</h3>
+                  <p>Deploy and manage cloud-based applications, leveraging cloud services for scalability, security, and high availability.</p>
+              </div>
+          </div>
+          <div class="card">
+              <div class="icon">
+                  <i class="fas fa-layer-group"></i>
+              </div>
+              <div class="info">
+                  <h3>Frontend Development</h3>
+                  <p>Create responsive and user-friendly interfaces using HTML, CSS, Bootstrap, Tailwind, and React to deliver an engaging user experience.</p>
+              </div>
+          </div>
+          <div class="card">
+              <div class="icon">
+                  <i class="fas fa-project-diagram"></i>
+              </div>
+              <div class="info">
+                  <h3>System Architecture & UML</h3>
+                  <p>Design system architectures and develop UML diagrams to ensure well-structured, maintainable software solutions.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+
+  <section class="projects" id="projects">
+    <h2 class="title">Projects</h2>
+    <div class="content">
+      <div class="project-card">
+        <div class="project-image">
+            <img src="image/vividora.png" />
+        </div>
+        <div class="project-info">
+            <p class="project-category">Comprehensive Perfume Store Website</p>
+            <strong class="project-title">
+                <span>Vividora Perfumes eCommerce Website</span>
+                <a href="https://vividoraperfumes.com/" class="more-details" target="_blank" rel="noopener noreferrer">More details</a>
+            </strong>
+            <p>this website, Built with Laravel, React.js, JavaScript, HTML, CSS, Tailwind, Bootstrap, and API integrations,</p>
+        </div>
+    </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="image/Screenshot 2024-04-02 174610.png" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Web Application for Managing Requests and Absences</p>
+                <strong class="project-title">
+                    <span>IST Management System for Requests and Absences</span>
+                </strong>
+                <p>this website, Built with Laravel, React.js, JavaScript, HTML, CSS, Tailwind, Bootstrap, and API integrations,</p>
+            </div>
+        </div>
+       
+        <div class="project-card">
+            <div class="project-image">
+                <img src="image/Screenshot 2024-04-02 184245.png" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Lawyer's Website for Managing Legal Services</p>
+                <strong class="project-title">
+                    <span>Law Firm Website and Client Management Portal</span>
+                </strong>
+                <p><p>
+                  This website, built with PHP, JavaScript, HTML, CSS, and MySQL, streamlines client management and case tracking for legal professionals.
+              </p>
+              </p>
+            </div>
+        </div>
+        <div class="project-card">
+            <div class="project-image">
+                <img src="image/Screenshot 2024-04-04 172451.png" />
+            </div>
+            <div class="project-info">
+                <p class="project-category">Planning and Managing Regional and Local Assessments</p>
+                <strong class="project-title">
+                    <span>EFM Program Planning and Progress Tracking System</span>
+                </strong>
+                <p>
+                  <p>
+                    This website, Developed with PHP, Laravel, HTML, CSS, Bootstrap, Tailwind, and MySQL, this website efficiently manages and tracks EFM program progress.
+                </p>
+                
+              </p>
+              
+            </div>
+        </div>
+        <div class="project-card">
+          <div class="project-image">
+              <img src="image/Screenshot 2024-04-02 175731.png" />
+          </div>
+          <div class="project-info">
+              <p class="project-category">Restaurant Website</p>
+              <strong class="project-title">
+                <span>Modern Restaurant Website Management and Sales</span>
+              </strong>
+              <p class="description details">This project showcases a restaurant website built using PHP, Laravel, HTML, CSS, Bootstrap, and MySQL. Click to explore more details about the process.</p>
+          </div>
+      </div>
+      
+</section>
+
+
+    <section class="cards contact" id="contact">
+        <h2 class="title">Let's work together</h2>
+        <div class="content">
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info">
+                    <h3>Phone</h3>
+                    <p>+212621531141</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info">
+                    <h3>Email</h3>
+                    <p>salimboulkhir123@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <p class="footer-title">Copyrights @ <span>Salim boulkhir</span></p>
+        <div class="social-icons">
+            <a href="https://web.facebook.com/salim.boulkhir.1?locale=fr_FR"><i class="fab fa-linkedin"></i></a>
+            <a href="https://x.com/SalimB1937"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/boulkhirsalim/"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
